@@ -1,0 +1,1 @@
+## Maodou.io activity-registrations package
