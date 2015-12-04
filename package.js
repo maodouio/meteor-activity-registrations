@@ -10,12 +10,6 @@ Package.describe({
   documentation: 'README.md'
 });
 
-// Package.onUse(function(api) {
-//   api.versionsFrom('1.2.1');
-//   api.use('ecmascript');
-//   api.addFiles('activity-registrations.js');
-// });
-
 Package.onUse(function(api) {
   api.versionsFrom('1.2.1');
   api.use('aldeed:simple-schema@1.3.2', ["server", "client"]);
@@ -28,12 +22,6 @@ Package.onUse(function(api) {
   api.addFiles("lib/routes.js");
 
   api.addFiles("client/startup.js", "client");
-
-  // api.addFiles("client/activity_registrations/activity_registrations.html", "client");
-  // api.addFiles("client/activity_registrations/activity_registrations.js", "client");
-  // 
-  // api.addFiles("client/activity_registrations/activity_registration_create.html", "client");
-  // api.addFiles("client/activity_registrations/activity_registration_create.js", "client");
 
   api.addFiles("server/permissions/registrations.js", "server");
   api.addFiles("server/publications/registrations.js", "server");
