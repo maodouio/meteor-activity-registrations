@@ -2,7 +2,7 @@ Package.describe({
   name: 'maodouio:activity-registrations',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'Maodou.io activity-registrations package.',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/maodouio/meteor-activity-registrations',
   // By default, Meteor will default to using README.md for documentation.
