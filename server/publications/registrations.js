@@ -19,13 +19,21 @@ Meteor.publishComposite("activityRegistrations", function(activityId) {
       {
         find: function (activity) {
           return Enrollments.find({activityId: activity._id});
-        }
+        },
+        children: [
+          {
+            find: function(enrollment) {
+              return Meteor.users.find({_id: enrollment.userId});
+            },
+          },
+          {
+            find: function(enrollment) {
+              console.log("publishComposite:", enrollment);
+              return UserProfiles.find({userId: enrollment.userId});
+            },
+          }
+        ]
       },
-      {
-        find: function(activity) {
-          return Like.collection.find({linkedObjectId: activity._id});
-        }
-      }
     ],
   };
 });
